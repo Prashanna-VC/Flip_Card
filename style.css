@@ -15,8 +15,8 @@ body{
 .card-container{
   perspective: 1000px;
   margin: 100px auto;
-  width: 360px;
-  height: 280px;
+  width: 350px;
+  height: 270px;
 }
 .card{
   position: relative;
@@ -88,6 +88,7 @@ background: radial-gradient(circle, rgba(104, 128, 247, 1) 0%, rgba(252, 70, 107
  background-clip: text;
  color: transparent;
  margin-bottom: 10px;
+ text-align: justify;
 }
 em {
   color: #eca1c4;
