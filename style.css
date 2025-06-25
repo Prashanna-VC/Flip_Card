@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  line-height: 1.4;
+}
+body{
+  background-color:black;
+}
+.card-container{
+  perspective: 1000px;
+  margin: 100px auto;
+  width: 360px;
+  height: 280px;
+}
+.card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+.card-container:hover .card{
+  transform: rotateY(180deg);
+}
+.FrontCard,
+.Back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.FrontCard{
+  background-color:white;
+  padding: 20px;
+}
+.FrontCard img{
+  max-width: 80%;
+  display: block;
+  margin: 65px auto;
+  height: 75px;
+  width: 200px;
+}
+.Back{
+  position: relative;
+  padding: 2px;
+  border-radius: 15px;
+ background: #d94398;
+background: linear-gradient(90deg, rgba(217, 67, 152, 1) 1%, rgba(225, 42, 95, 1) 18%, rgba(232, 21, 46, 1) 29%, rgba(248, 31, 43, 1) 41%, rgba(253, 29, 29, 1) 57%, rgba(252, 176, 69, 1) 82%);
+  animation: flow-border 4s linear infinite;
+  transform: rotateY(180deg);
+}
+.Back-card-content{
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 16px 20px 12px 20px;
+  height: 100%;
+ overflow-y: auto;
+ text-align: left;
+}
+.name{
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #4c87fc;
+  margin-bottom: 8px;
+}
+.tagline{
+   font-size: 20px;
+   font-weight: 700;
+   margin: 8px 0;
+  color: #05f83a;
+}
+.description{
+ font-size: 0.8rem;
+ background: #6880f7;
+background: radial-gradient(circle, rgba(104, 128, 247, 1) 0%, rgba(252, 70, 107, 1) 100%);
+ background-clip: text;
+ color: transparent;
+ margin-bottom: 10px;
+}
+em {
+  color: #eca1c4;
+  text-transform: capitalize;
+}
+
+.btn{
+  padding: 6px 12px;
+  border: 1px solid #4caf50;
+  background-color: #00ffff;
+  color: rgb(0, 0,0);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+.btn:hover{
+  background-color: #fcb045;
+  color: white;
+  border-color: #f80505;
+}
+
+@keyframes flow-border{
+  0%{
+    background-position: 0% 50%;
+  }
+ 
+  100%{
+    background-position: 0% 50%;
+  }
+}
